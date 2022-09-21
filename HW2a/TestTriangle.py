@@ -20,7 +20,7 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(1,1,1),'Equilateral','1,1,1 should be equilateral')
         
     def testValidTriangle(self): 
-        self.assertEqual(classifyTriangle(500,1,501),'NotATriangle','500,1,502 is not a triangle')
+        self.assertEqual(classifyTriangle(100,1,101),'NotATriangle','500,1,502 is not a triangle')
 
     def testScalene(self): 
         self.assertEqual(classifyTriangle(12,30,20),'Scalene','12,30,20 should be a Scalene triangle')
