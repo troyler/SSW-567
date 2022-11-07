@@ -1,3 +1,3 @@
 # SSW-567
 
-[![build status of master](https://travis-ci.com/troyler/SSW-567.svg?branch=master)](https://travis-ci.com/troyler/SSW-567)
+[![<GITHUB_USERNAME>](https://circleci.com/gh/troyler/SSW-567.svg?style=svg)](https://app.circleci.com/pipelines/github/troyler/SSW-567?branch=main&filter=all)
