@@ -16,7 +16,6 @@ jobs:
             pytest --junitxml=test-results/junit.xml HW2a/TestTriangle.py
       - store_test_results:
           path: test-results
-jobs:
   build-and-test-gHub:
     docker:
       - image: cimg/python:3.10.2
