@@ -5,7 +5,7 @@ orbs:
     python: circleci/python@2.0.1
 
 jobs:
-  build-and-test:
+  build-and-test-triangle:
     docker:
       - image: cimg/python:3.10.2
     steps:
@@ -16,7 +16,23 @@ jobs:
             pytest --junitxml=test-results/junit.xml HW2a/TestTriangle.py
       - store_test_results:
           path: test-results
+jobs:
+  build-and-test-gHub:
+    docker:
+      - image: cimg/python:3.10.2
+    steps:
+      - checkout
+      - run: 
+          command: |
+            pip install pytest
+            pytest --junitxml=test-results/junit.xml HW4a/gHubTest.py
+      - store_test_results:
+          path: test-results
 workflows:
   testing_triangles:
     jobs:
-      - build-and-test
+      - build-and-test-triangle
+  testing_triangles:
+    jobs:
+      - build-and-test-gHub
+

@@ -7,6 +7,7 @@ def getUserRepos(gitID):
     repositories = []
     repos = requests.get("https://api.github.com/users/{}/repos".format(gitID))
     for repo in repos.json():
+        print(repo)
         repositories.append(repo["name"])
     return repositories
 
