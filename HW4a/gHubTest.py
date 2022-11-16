@@ -16,7 +16,7 @@ class TestGitHubRequest(unittest.TestCase):
         self.assertEqual(getUserRepos("troyler"),repositories)
 
     def testCommitHistory(self):
-        repositories = [('ISS-API-Learning',1), ('python-circleci', 30), ('SSW-567', 17), ('SSW-567-Triangle', 1), ('wordleplusplus',30)] 
+        repositories = [('ISS-API-Learning',1), ('python-circleci', 30), ('SSW-567', 19), ('SSW-567-Triangle', 1), ('wordleplusplus',30)] 
         for repo in repositories:
             self.assertEqual(commitHistory("troyler", repo[0]), repo[1])
 
