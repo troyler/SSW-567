@@ -13,6 +13,7 @@ jobs:
       - run: 
           command: |
             pip install pytest
+            pip install requests
             pytest --junitxml=test-results/junit.xml HW5a/mockTest.py
       - store_test_results:
           path: test-results
