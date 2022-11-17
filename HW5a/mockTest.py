@@ -28,3 +28,12 @@ class Testing_gHub_API(unittest.TestCase):
         mock_response.json.return_value = json.load(f)
         f.close()
 
+    @mock.patch('gHub.commitHistory')
+    def mock_commit_history(self,mock_cm):
+        mock_cm.return_value = 22
+        result = gHub.commitHistory('troyler', 'SSW567')
+        self.assertEqual(result, 22)
+
+
+    
+
