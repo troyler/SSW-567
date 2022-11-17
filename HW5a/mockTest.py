@@ -21,7 +21,7 @@ class Testing_gHub_API(unittest.TestCase):
         self.assertEqual(result, 6)
 
     @mock.patch('gHub.requests')
-    def testUserRepos(self, mock_GUR):
+    def testUserRepos(self, mock_req):
         mock_response = mock.MagicMock()
         mock_response.status_code = 200
         f = open('hw4a/rk_repo.json')
