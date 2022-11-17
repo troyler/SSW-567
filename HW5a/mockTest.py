@@ -8,8 +8,8 @@ class Testing_gHub_API(unittest.TestCase):
 
 
     @mock.patch('gHub.getUserRepos')
-    def mock_getUserRepos(self,mock_GUR):
-        mock_GUR.return_value = 10
+    def mock_getUserRepos(self,mock_get):
+        mock_get.return_value = 10
         result = gHub.getUserRepos('rickhempinski')
         self.assertEqual(result, 10)
 
